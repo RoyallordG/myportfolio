@@ -575,6 +575,9 @@ font-size: 14px;
                           
                             row-gap: 10px;
                         }
+                        .contact-form form{
+                            width: 100%;
+                        }
                         
                     }
                    
