@@ -17,6 +17,21 @@
     --h4-font-size: 20px;
     --h5-font-size: 18px;
 }
+.overlay{
+    position: absolute;
+   background: black;
+   opacity: 0.4;
+   width: 100%;
+   height: 450%;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: 99;
+   visibility: hidden;
+}
+.overlay.active{
+    visibility: visible;
+}
 
 header{
     position: fixed;
@@ -219,8 +234,25 @@ background: #606775;
 padding: 20px;
 }
 
-
- .btn{
+.port-button{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 50px;
+}
+.port-button button{
+   border: 2px solid black;
+   outline: none;
+   padding: 10px 20px;
+   margin-right: 5px;
+   margin-left: 5px;
+   cursor: pointer;
+    }
+    .port-button button:hover{
+      background: black;
+      color: white;
+         }   
+ .load-btn, .btn{
     text-transform: uppercase;
     background: 	#080808;
     padding: 8px 20px;
@@ -230,6 +262,8 @@ padding: 20px;
     color: white;
     margin: auto;
     cursor: pointer;
+    /* width: 150px;
+    justify-content: center; */
 }
 
 .contact-form{
@@ -549,6 +583,17 @@ font-size: 14px;
                          } 
                     }
                     @media (max-width: 389px){
+
+                        .port-button{
+                      width: 100%;
+                       }
+                       .port-button button{
+                         font-size: 14px;
+                          padding: 5px 10px;
+                          margin-right: 3px;
+                          margin-left: 3px;
+                          
+                         }
                         
                         .home .home-img img{
                             width: 250px;
@@ -578,6 +623,8 @@ font-size: 14px;
                         .contact-form form{
                             width: 100%;
                         }
-                        
+                        .portfolio-container h2{
+                         font-size: 16px;
+                        }
                     }
                    
