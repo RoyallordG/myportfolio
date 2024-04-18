@@ -6,7 +6,7 @@ let overlay = document.querySelector('.overlay')
 menu.onclick = () => {
    menu.classList.toggle('bx-x');
    navbar.classList.toggle('active')
-   overlay.classList.add('active')
+   overlay.classList.toggle('active')
 }
 window.onscroll = () => {
    menu.classList.remove('bx-x');
@@ -140,7 +140,6 @@ function showItem(menuItem) {
     }
 }
 
-
 let filterBtns = document.querySelectorAll('.filter-btn');
 filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
@@ -193,6 +192,15 @@ loadMoreBtn.addEventListener('click', function () {
     }
     setLoadMoreVisibility();  
 });
+
+
+
+let preloader = document.querySelector(".preloader")
+
+window.addEventListener('load', function(){
+    preloader.classList.add('hidden')
+})
+
 
 
 
