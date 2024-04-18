@@ -648,7 +648,7 @@ font-size: 14px;
                         display: grid;
                         justify-content: center;
                         align-items: center;
-                        background: rgb(48, 48, 96);
+                        background: rgb(55, 55, 89);
                         visibility: visible;
                         z-index: 9999;
                     }
