@@ -222,13 +222,6 @@ loadMoreBtn.addEventListener('click', function () {
 });
 
 
-
-let preloader = document.querySelector(".preloader")
-
-window.addEventListener('load', function(){
-    preloader.classList.add('hidden')
-})
-
 let date = document.getElementById('date')
 date.innerHTML = new Date().getFullYear()
 
