@@ -14,10 +14,13 @@
         <img src="preloader.gif" alt="">
     </div>
     <div class="overlay"></div>
+    
+        <a href="#home"><i class='bx bx-up-arrow-alt back-to-top'></i></a>
+ 
     <header>
-        <a href="" class="logo">Giddx</a>
-            <ul class="navbar">
-               <li><a href="#home">Home</a></li>
+        <a href="" class="logo">Gidd<span class="ex">x</span></a>
+            <ul class = "navbar">
+               <li><a class="activet" href="#home">Home</a></li>
                <li><a href="#portfolio">Portfolio</a></li>
                <li><a href="#services">Services</a></li> 
                <li><a href="#contact">Contact</a></li>
@@ -28,14 +31,11 @@
    
     <section id="home" class="home">
 <div class="home-text">
-<h6>I'm Gideon Amusan, Web Developer & Web Designer</h6>
-<h1>I love to create</h1>
-<p>Transforming ideas into pixel-perfect awesomeness! <br> Let's build something legendary <br> Reach out and let the adventures begin!</p> 
+<h1>I am Gideon Amusan</h1>
+<p class="hero-subtitle"><span class="typed" data-typed-items="Web Developer, Graphics Designer, Freelancer, Social Media Manager"></span></p>
 <a href="#contact">Contact Me</a>   
 </div>
-<div class="home-img">
-    <img src="usep.png" alt="">
-</div>
+
     </section>
     <section class="portfolio" id="portfolio">
         <div class="heading">
@@ -110,9 +110,12 @@
         <a href="https://www.linkedin.com/in/gideon-amusan-92270428a/"><i class='bx bxl-linkedin'></i></a>
     </div>
     <div class="copyright">
-        <p>&#169; 2023 AmdeoTech by Gideon All Right Reserved</p>
+        <p>&#169; <span id="date"></span> AmdeoTech by Gideon All Right Reserved</p>
         </div>
 </section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="script.js"></script>
 </body>
 </html>

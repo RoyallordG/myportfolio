@@ -16,6 +16,7 @@
     --h3-font-size: 30px;
     --h4-font-size: 20px;
     --h5-font-size: 18px;
+    --blue-color: #0078ff;
 }
 .overlay{
     position: fixed;
@@ -62,6 +63,30 @@ header.shadow{
 border-bottom: 2px solid white;
 transition: transform 0.3s ease-out;
 }
+.ex{
+    color: var(--blue-color);
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color:white;
+    background: var(--blue-color);
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    z-index: 5;
+    border-radius: 50px;
+    font-size: 28px;
+    visibility: hidden;
+
+}
+
+.show-arrow{
+    visibility: visible;
+}
 
 .navbar .cv  {
     background: white;
@@ -71,11 +96,17 @@ transition: transform 0.3s ease-out;
 }
 .navbar .cv:hover{
     border-bottom: none;
+    background: var(--blue-color);
+    color: white;
+}
+.navbar .cv:hover .bx{
+color: white;
 }
 .navbar .cv .bx{
     color: black;
     font-size: 20px;
 }
+
 header .logo{
     color: white;
     font-weight: 700;
@@ -93,31 +124,32 @@ section{
     padding: 50px 100px;
 }
 .home{
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-    gap: 7.5rem;
-    background: black;
+    justify-content: center;
+    background-image: url(bg\ image\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
 }
-
-.home .home-text h6{
-    color: white;
-    font-size: 18px;
-    letter-spacing: 1px;
+.home-text{
+    text-align: center;
 }
+
 .home .home-text h1{
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 10px;
     letter-spacing: 1px;
 }
 .home .home-text p{
     color: white;
-    margin-top: 10px;
-    line-height: 30px; 
-    margin-bottom: 15px;
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
     letter-spacing: 1px;
 }
 .home .home-text a{
@@ -127,6 +159,10 @@ section{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 15px;
+}
+.home .home-text a:hover{
+    background: var(--blue-color);
+    color: white;
 }
 .heading h3{
     text-align: center;
@@ -159,9 +195,11 @@ margin-top: 2rem;
     font-size: 35px;
     font-weight: 100px;
     border: 2px solid grey;
+    border: 2px solid var(--blue-color);
     border-radius: 50%;
     padding: 20px;
 }
+
 .service-container .img-box h5{
     font-size: var(--h5-font-size);
     margin-top: 1rem;
@@ -257,8 +295,9 @@ margin-top: 50px;
    cursor: pointer;
     }
     .port-button button:hover{
-      background: black;
+      background: var(--blue-color);
       color: white;
+      border: none;
          }   
  .load-btn, .btn{
     text-transform: uppercase;
@@ -270,10 +309,14 @@ margin-top: 50px;
     color: white;
     margin: auto;
     cursor: pointer;
-    /* width: 150px;
-    justify-content: center; */
+    
 }
-
+ .btn:hover{
+    background: var(--blue-color);
+    color: white;
+    border: none;
+    font-size: 600;
+}
 
 /* Contact Section */
 
@@ -345,6 +388,9 @@ form textarea{
     font-size: 24px;
     padding: 0 10px;
 }
+.footer .social-handles .bx:hover{
+    color: var(--blue-color);
+}
 .footer .copyright{
 margin-top: 4rem;
 }
@@ -353,55 +399,14 @@ font-size: 14px;
 }
 
 /* Responsiveness */
-@media (max-width: 1093px){
-  .home .home-img img{
-    width: 445px;
-  } 
-}
-@media (max-width: 1063px){
-   .home .home-text h1{
-        font-size: 45px;
-    }
-    .home .home-img img{
-      width: 450px;
-    } 
-  }
-  @media (max-width: 1063px){
-     .home .home-img img{
-       width: 440px;
-     } 
-   }
+
    @media (max-width: 1056px){
 .services{
    height: 750px;
  }
   }
-   @media (max-width: 1001px){
-    .home .home-text h1{
-        font-size: 43px;
-    }
-    .home .home-img img{
-      width: 430px;
-    } 
-  }  
-  @media (max-width: 955px){
-    .home .home-text h1{
-        font-size: 40px;
-    }
-    .home .home-img img{
-      width: 405px;
-    } 
-  }        
-  @media (max-width: 921px){
-    .home .home-img img{
-      width: 390px;
-    } 
-  } 
-  @media (max-width: 890px){
-    .home .home-img img{
-      width: 380px;
-    } 
-  } 
+        
+ 
   @media (max-width: 877px){
    .home{
     flex: display;
@@ -427,6 +432,7 @@ font-size: 14px;
    
     .home{
         margin-top: 40px;
+        height: 537px;
     } 
     .navbar{
         gap: 0.3rem;
@@ -454,6 +460,9 @@ font-size: 14px;
     }
   }  
   @media (max-width: 768px){
+    .navbar a.activet{
+        color: var(--blue-color);
+    }
     #menu-icon{
         display: initial;
         cursor: pointer;
@@ -486,7 +495,9 @@ font-size: 14px;
         text-transform: lowercase;
         font-size: 30px;
         font-weight: 700px;
-      
+       }
+       .navbar li a:hover{
+        color: var(--blue-color);
        }
        .navbar .cv  {
         border: 2px solid black;
@@ -502,6 +513,20 @@ font-size: 14px;
     
   }  
   @media (max-width: 668px){
+    .home .home-text h1{
+        color: white;
+        font-size: 35px;
+        margin-top: 10px;
+        letter-spacing: 1px;
+    }
+    .home .home-text p{
+        color: white;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
     .contact-form form{
         display: flex;
         flex-direction: column;
@@ -515,6 +540,10 @@ font-size: 14px;
     }
    
     @media (max-width: 564px){
+        
+        .home{
+            height: 100vh;
+           }
             .services{
                 height: 1020px; 
                 clip-path: polygon(0 0, 100% 4%, 100% 95%, 0 100%);
@@ -572,6 +601,8 @@ font-size: 14px;
                 }
                    
                     @media (max-width: 457px){
+                        
+
                        
                         .navbar li{
                             margin-left: 35px;

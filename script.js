@@ -3,6 +3,7 @@ let navbar = document.querySelector('.navbar')
 let header = document.querySelector('header')
 let overlay = document.querySelector('.overlay')
 
+
 menu.onclick = () => {
    menu.classList.toggle('bx-x');
    navbar.classList.toggle('active')
@@ -13,9 +14,36 @@ window.onscroll = () => {
    navbar.classList.remove('active')
    overlay.classList.remove('active')
 }
+
+let backtotop = document.querySelector('.back-to-top')
 window.addEventListener('scroll', () => {
    header.classList.toggle('shadow', window.scrollY > 0);
+let scrollHeight = window.scrollY 
+if(scrollHeight > 300){
+    backtotop.classList.add('show-arrow')
+}
+else{
+    backtotop.classList.remove('show-arrow') 
+}
+
 })
+
+
+const typed = document.querySelector('.typed')
+  if (typed) {
+    let typed_strings = typed.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+
+
+
 let portfolio = [
    {
       id : 1,
@@ -201,6 +229,24 @@ window.addEventListener('load', function(){
     preloader.classList.add('hidden')
 })
 
+let date = document.getElementById('date')
+date.innerHTML = new Date().getFullYear()
+
+// Get all the navigation links
+let navLinks = document.querySelectorAll('a');
+
+// Add a click event listener to each navigation link
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        // Remove the 'activet' class from all links
+        navLinks.forEach(function(navLink) {
+            navLink.classList.remove('activet');
+        });
+
+        // Add the 'activet' class to the clicked link
+        event.currentTarget.classList.add('activet');
+    });
+});
 
 
 
