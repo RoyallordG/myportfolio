@@ -128,6 +128,48 @@ let portfolio = [
     category : 'graphics',
     aTag : "https://www.behance.net/gideonamusan",
     shadow: "box3"
+ },
+ {
+    id : 13,
+    img : "website.png",
+    category : 'web-dev',
+    aTag : "https://royallordg.github.io/smartgportfolio/",
+    shadow: "box4"
+ },
+ {
+    id : 14,
+    img : "Graphic10.jpg",
+    category : 'graphics',
+    aTag : "https://www.behance.net/gideonamusan",
+    shadow: "box5"
+ },
+ {
+    id : 15,
+    img : "Graphic11.jpg",
+    category : 'graphics',
+    aTag : "https://www.behance.net/gideonamusan",
+    shadow: "box6"
+ },
+ {
+    id : 16,
+    img : "Graphic12.jpg",
+    category : 'graphics',
+    aTag : "https://www.behance.net/gideonamusan",
+    shadow: "box7"
+ },
+ {
+    id : 17,
+    img : "Graphic13.jpg",
+    category : 'graphics',
+    aTag : "https://www.behance.net/gideonamusan",
+    shadow: "box8"
+ },
+ {
+    id : 18,
+    img : "Graphic14.jpg",
+    category : 'graphics',
+    aTag : "https://www.behance.net/gideonamusan",
+    shadow: "box9"
  }
 ]
 
